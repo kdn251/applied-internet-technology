@@ -1,0 +1,22 @@
+{
+  "name": "homework02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/hoffy.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/hoffy-test.js"
+  },
+  "repository": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "mocha-sinon": "^1.1.6",
+    "sinon": "^1.17.7"
+  }
+}

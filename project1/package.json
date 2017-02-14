@@ -1,0 +1,22 @@
+{
+  "name": "reversi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/test_reversi.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-mocha": "^4.8.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.6"
+  }
+}
