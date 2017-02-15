@@ -1,4 +1,4 @@
-// reversi.js
+-// reversi.js
 
 const rev = {
 
@@ -49,7 +49,71 @@ const rev = {
 
     };
 
+  },
+
+  constrainDecorator: function(fn, min, max) {
+
+    return function() {
+
+      if(fn.apply(this, arguments) < min) {
+
+        return min;
+
+      }
+
+      else if(fn.apply(this, arguments) > max) {
+
+        return max;
+
+      }
+
+      else {
+
+        return fn.apply(this, arguments);
+
+      }
+
+    };
+
+  },
+
+  limitCallsDecorator: function(fn, n) {
+
+    let count = 0;
+
+    return function() {
+
+      if(count < n) {
+
+        count++;
+        return fn.apply(this, arguments);
+
+      }
+
+      else {
+
+        return undefined;
+
+      }
+
+    };
+
+  },
+
+  mapWith: function(fn) {
+
+    return function(newFunction) {
+      return Array.prototype.map.call(newFunction, function(current) {
+        return fn.call(this, current
+
+
+          );
+      });
+
+    }
+
   }
+
 
 	// prod: function(...numbers) {
   //
@@ -78,6 +142,8 @@ const rev = {
   //   rev.prodRecursive(index, product, ...numbers);
   //
   // },
+
+
 
 
 };
