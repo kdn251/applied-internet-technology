@@ -1,5 +1,5 @@
 const chai = require('chai');
-const expect = chai.expect; 
+const expect = chai.expect;
 require('mocha-sinon');
 Object.assign(global, require('../src/hoffy.js'));
 
@@ -30,7 +30,7 @@ describe('hoffy', function() {
     });
     describe('maybe', function() {
         function createFullName(firstName, lastName) {
-            return `${firstName} ${lastName}`; 
+            return `${firstName} ${lastName}`;
         }
         it('creates a new function that calls the old function and returns the old functions value', function() {
             expect(maybe(createFullName)('Frederick', 'Functionstein')).to.be.equal('Frederick Functionstein');
@@ -41,9 +41,9 @@ describe('hoffy', function() {
         });
     });
     describe('mapWith', function() {
-        function fact(x) { 
-            if (x === 0) { 
-                return 1; 
+        function fact(x) {
+            if (x === 0) {
+                return 1;
             } else if (x > 0) {
                 return Array(x).fill(0).reduce((acc, cur, i) => acc * (i + 1), 1);
             }
@@ -72,7 +72,7 @@ describe('hoffy', function() {
         });
 
     });
-    describe('readFileWith', function() {
+    describe('readFileWith', function() { 
         it('creates a function that reads a file and automatically parses it as an INI file', function(done) {
             const readFileWithSimpleINIParse = readFileWith(simpleINIParse);
             const obj = {foo: 'bar', baz: 'qux', quxx: 'corge'};
@@ -81,7 +81,7 @@ describe('hoffy', function() {
                 expect(err).to.be.null;
                 done();
             });
-            
+
         });
         it('creates a function that reads a file and automatically parses it as an JSON file', function(done) {
             const readFileWithJSONParse = readFileWith(JSON.parse);
@@ -91,7 +91,7 @@ describe('hoffy', function() {
                 expect(err).to.be.null;
                 done();
             });
-            
+
         });
         it('creates a function that propagates err object if error occurs (for example, file does not exist)', function(done) {
             const readFileWithJSONParse = readFileWith(JSON.parse);
@@ -100,10 +100,10 @@ describe('hoffy', function() {
                 expect(data).to.be.undefined;
                 done();
             });
-            
+
         });
     });
- 
+
 
     describe('constrainDecorator', function() {
 
@@ -147,5 +147,3 @@ describe('hoffy', function() {
         });
     });
 });
-
-
