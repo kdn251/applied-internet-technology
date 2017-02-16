@@ -34,7 +34,7 @@ function processGameData(dataToProcess) {
 
   stats += "\n" + dataToProcess.vls.tc + " " + dataToProcess.vls.tn + " - " + team1Score;
   stats += "\n" + dataToProcess.hls.tc + " " + dataToProcess.hls.tn + " - " + team2Score;
-  console.log(stats);
+  //console.log(stats);
 
   dataToProcess.vls.pstsg.forEach(function(element) {
 
@@ -58,7 +58,7 @@ function processGameData(dataToProcess) {
 
   });
 
-  console.log('name: ', maxReboundsName + ' rebounds: ' + maxRebounds);
+  stats += "\n" + "*Most rebounds: " + maxReboundsName + " with " + maxRebounds;
 
   teams.forEach(function(team){
     team.filter(function(element) {
@@ -76,6 +76,9 @@ function processGameData(dataToProcess) {
     });
   });
 
+  stats += "\n*player with the highest 3 point percentage that took at least 5 shots: " + threePointMaxName
+    + " at %" + threePointMax;
+
   teams.forEach(function(team) {
 
     team.forEach(function(player) {
@@ -90,36 +93,33 @@ function processGameData(dataToProcess) {
 
   });
 
-  let badPlayers = dataToProcess.vls.tc + " " + dataToProcess.vls.tn + "\n";
+  stats += "\n*There were " + totalBlocks + " players that had at least one block";
+
+  let badPlayers = "\t" + dataToProcess.vls.tc + " " + dataToProcess.vls.tn + "\n";
   dataToProcess.vls.pstsg.filter(function(element) {
 
     return element.tov > element.ast;
 
   }).forEach(function(element) {
 
-    badPlayers += "\t*" + element.fn + " " + element.ln + "\n";
+    badPlayers += "\t*" + element.fn + " " + element.ln + " has an assist to turnover ratio of " + element.ast + ":" + element.tov + "\n";
 
   });
 
-  badPlayers += "\n" + dataToProcess.hls.tc + " " + dataToProcess.hls.tn + "\n";
+  stats += "\n*Players with more turnovers than assists: \n";
+  badPlayers += "\n\t" + dataToProcess.hls.tc + " " + dataToProcess.hls.tn + "\n";
   dataToProcess.hls.pstsg.filter(function(element) {
 
     return element.tov > element.ast;
 
   }).forEach(function(element) {
 
-    badPlayers += "\t*" + element.fn + " " + element.ln + "\n";
+    badPlayers += "\t*" + element.fn + " " + element.ln + " has an assist to turnover ratio of " + element.ast + ":" + element.tov +"\n";
 
   });
 
-  console.log(badPlayers);
-
-
-  console.log("BLOCKS: " + totalBlocks);
-
-  console.log('three point: ' + threePointMax + 'name: ' + threePointMaxName);
-
-  //console.log("SCORE:" + team1Score + team2Score);
+  stats += badPlayers;
+  console.log(stats);
 
 }
 
