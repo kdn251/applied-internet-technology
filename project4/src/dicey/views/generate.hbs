@@ -1,0 +1,29 @@
+<form method="GET" action="">
+  Number of words: <input type="text" name="numWords">
+  Separator: <select name="glue">
+    <option value="space">space " "</option>
+    <option value="dash">dash "-"</option>
+    <option value="comma">comma ","</option>
+    <option value="star">star "*"</option>
+    <option value="none">none ""</option>
+    <input type="submit" value="Roll Dice">
+
+</form>
+
+<br>
+Generated Passphrase:
+<br><br>
+
+<span class="passPhrase">
+  {{passPhrase}}
+</span>
+
+<br>
+
+<ul class="numberCombination">
+  {{#each numberCombination}}
+  <li class="currentCombination">{{number}} <br> {{word}}</li>
+  {{/each}}
+</ul>
+
+</form>

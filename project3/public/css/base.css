@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+li a {
+    width: 33.33%;
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}

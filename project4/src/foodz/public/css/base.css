@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.add {
+  text-align: center;
+}
+
+. {
+    font-family: Georgia;
+}
+
+.filterOptions {
+    text-align: center;
+}
+
+body {
+    background-color:   #87CEEB
+}
+
+li {
+  padding: 30px 30px;
+  text-align: center;
+}
+
+ul {
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}

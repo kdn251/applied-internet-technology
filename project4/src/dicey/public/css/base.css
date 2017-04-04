@@ -1,0 +1,42 @@
+h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.navigation {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navigationItem {
+  float: left;
+  text-align: center;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #6495ED;
+}
+
+.passPhrase {
+
+}
+
+.numberCombination {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.currentCombination {
+  display: inline-block;
+  text-align: center;
+}

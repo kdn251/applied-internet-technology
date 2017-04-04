@@ -1,0 +1,22 @@
+{
+  "name": "miniweb",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.16.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "mocha": "^3.2.0",
+    "mocha-sinon": "^1.1.6",
+    "nodemon": "^1.11.0",
+    "sinon": "^1.17.7"
+  }
+}

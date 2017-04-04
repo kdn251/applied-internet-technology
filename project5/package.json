@@ -1,0 +1,26 @@
+{
+  "name": "kdn251-homework05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^3.18.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "mongoose": "^4.9.2",
+    "mongoose-url-slugs": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-008-spring-2017/kdn251-homework05.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-008-spring-2017/kdn251-homework05/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-008-spring-2017/kdn251-homework05#readme"
+}

@@ -1,0 +1,34 @@
+<h1> Restaurant Menu </h1>
+
+<form class="filterOptions" method="GET" action="">
+   <input type="radio" name="filterCategory" value="breakfast"> Breakfast
+   <input type="radio" name="filterCategory" value="lunch"> Lunch
+   <input type="radio" name="filterCategory" value="dinner"> Dinner
+   <input type="radio" name="filterCategory" value="anytime"> Anytime
+   <input type="submit" value="Filter Meals">
+</form>
+
+<h2> Recommended Meals ({{type}} Only) </h2>
+<ul>
+    {{#each meals}}
+    <li><strong>{{name}} ({{filterCategory}})</strong> <br> {{description}}</li>
+    {{/each}}
+</ul>
+
+<form method="POST" action"">
+  <h2> Add a Meal Recommendation: </h2>
+  <p class="add">
+    Name: <input name="name" type="text">
+    <br>
+    Description: <input name="description" type="text">
+    <br>
+  <input type="radio" name="filterCategory" value="breakfast"> Breakfast
+  <input type="radio" name="filterCategory" value="lunch"> Lunch
+  <br>
+  <input type="radio" name="filterCategory" value="dinner"> Dinner
+  <input type="radio" name="filterCategory" value="anytime"> Anytime
+  <br>
+  <input type="submit" value="Add Meal">
+  </p>
+
+</form>

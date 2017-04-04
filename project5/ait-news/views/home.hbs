@@ -1,0 +1,14 @@
+<form class="addLink" method="POST" action="/postLink">
+  <h1> 480 News! </h1>
+  <ol>
+    {{#each links}}
+    <li class="post"><a href={{url}}>{{title}}</a>, <a href={{slug}}>[comments]</a></li>
+    {{/each}}
+  </ol>
+
+  <p class="add">
+    URL: <input name="url" type="text">
+    Title: <input name="title" type="text">
+  <input type="submit" value="Post">
+  </p>
+</form>
